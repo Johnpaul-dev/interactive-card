@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+:root{
+    --white: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2em;
+}
+/* aside-left{
+    height: 100vh;
+    width: 6vw;
+    height: 100vh;
+} */
+.img-bg{
+    position: absolute;
+    width: 30vw;
+    height: 100vh;
+}
+.img-bg-mobile{
+    display: none;
+}
+.card-front {
+    position: absolute;
+    width: 380px;
+    margin: 110px 0 0 110px;
+    -webkit-box-shadow: 65px 51px 39px -22px rgba(143,143,143,0.46);
+    -moz-box-shadow: 65px 51px 39px -22px rgba(143,143,143,0.46);
+    box-shadow: 65px 51px 39px -22px rgba(143,143,143,0.46);
+}
+.card-back {
+    position: absolute;
+    width: 380px;
+    margin: 360px 0 0 180px;
+    -webkit-box-shadow: 65px 51px 39px -22px rgba(143,143,143,0.46);
+    -moz-box-shadow: 65px 51px 39px -22px rgba(143,143,143,0.46);
+    box-shadow: 65px 51px 39px -22px rgba(143,143,143,0.46);
+}
+.card-logo {
+    position: absolute;
+    height: 40px;
+    margin: 135px 0 0 135px;
+}
+#card-number {
+    position: absolute;
+    color: var(--white);
+    width: 280px;
+    margin: 220px 0 0 135px;
+}
+#card-holder {
+    position: absolute;
+    margin: 270px 0 0 135px;
+    color: var(--white);
+} 
+#card-date {
+    position:absolute;
+    margin: 270px 0 0 400px;
+    color: var(--white);
+}
+#cvc{
+    position: absolute;
+    margin: 451px 0 0 480px;
+    color: var(--white);
+}
+#card{
+    display: flex;
+    flex-direction: column;
+    margin-left: 405px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    height: 60vh;
+    width: 25vw;
+}
+.box p{
+    font-size: 0.7em;
+    margin: 25px 0 5px 0;
+    font-weight: bold;
+}
+.box input{
+    border: 1px solid var(--Dark-grayish-violet);
+    appearance: none;
+    outline:none;
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    font-family: inherit;
+}
+.box input:hover{
+    cursor: pointer;
+}
+#month-input{
+    width: 20%;
+    margin-right: 8px;
+}
+#year-input{
+    width: 20%;
+    margin-right: 8px;
+}
+#cvc-label{
+    margin-left: 30px;
+}
+#cvc-input{
+    width: 50%;
+}
+.btn{
+    text-align: center;
+    width: auto;
+    background-color: var(--Very-dark-violet);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+sub{
+    font-size: 0.67em;
+    display: none;
+    margin-top: 0;
+    color: rgb(255, 31, 31);
+}
+
+#cvc-error{
+    float: right;
+}
+#success{
+    display: none;
+    flex-direction: column;
+    margin-left: 405px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+section div{
+    height: 25vh;
+}
+section img{
+    margin: 0 0 20px 60px;
+}
+section h2{
+   margin: 0 0 10px 27px;
+}
+section p{
+    color: rgb(122, 118, 118);
+    font-weight: bolder;
+}
+section .btn{
+  margin-top: 20px;  
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+    body{
+        font-size: .9em;
+    }
+    .img-bg-mobile{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 23vh;
+        z-index: -2;
+    }
+    .img-bg{
+        display: none;
+    }
+    .card-back{
+        position: absolute;
+        width: 70vw;
+        margin: 25px 0px 0px 90px ;
+        z-index: -1;
+    }
+    #cvc{
+        margin: 90px 0px 0 300px;
+    }
+    .card-front{
+        position: absolute;
+        width: 70vw;
+        margin:110px 0px 0px 30px;
+    }
+    .card-logo {
+        margin: 0;
+        height: 25px;
+        margin:130px 0px 0px 50px;
+    }
+    #card-number{
+        margin:190px 0px 0px 50px;
+    }
+    #card-holder{
+        margin:230px 0px 0px 50px;
+    }
+    #card-date{
+        margin:230px 0px 0px 240px;
+    }
+    #card{
+        position: absolute;
+        margin: 150px 0 0 30px;
+        align-items:baseline;
+    }
+    .box{
+        width: 90%;
+    }
+
+    #cvc-label{
+        float: right;
+        margin-right: 140px;
+    }
+    #success{
+        position: absolute;
+        margin: 80px 0 0 90px;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./style.css"> 
+  
+  <title>Interactive card</title>
+
+</head>
+<body>
+
+  <aside-left id="card-section">
+      <img class="img-bg" src="images/bg-main-mobile.png"></img> <!--mobile-bg-->
+      <img class="img-bg-mobile" src="./images/bg-main-desktop.png"></img> 
+      <img src="./images/bg-card-front.png" alt="" class="card-front"></img>
+      <span id="card-number">1234 5678 9123 0000</span>
+      <span id="card-holder">Jane Appleseed</span>
+      <div id="card-date">
+        <span id="month">09</span>
+        <span>/</span>
+        <span id="year">26</span>
+      </div>
+      <img src="/images/card-logo.svg" alt="" class="card-logo">
+        <img src="./images/bg-card-back.png" alt="" class="card-back">
+        <span id="cvc">000</span>
+  <aside-left>
+    </aside-left>
+      
+  <aside-right id="card">
+    <div class="box">
+      <form>
+        <p>
+          Cardholder Name
+        </p>
+         <input id="card-holder-input" type="text" placeholder="e.g. Jane Appleseed" autocomplete="off"> 
+        <p>
+          Card Number
+        </p>
+          <input id="card-number-input" type="text" placeholder="e.g. 1234 5678 9123 0000 " autocomplete="off">
+          <sub id="number-error">wrong format, numbers only</sub>
+          <div class="input row">
+            <p>
+              Exp. Date (MM/YY)
+              <span id="cvc-label">
+                CVC 
+              </span>
+            </p>
+              <input id="month-input" type="text" placeholder="MM" autocomplete="off">
+              <input id="year-input" type="text" placeholder="YY" autocomplete="off">
+           
+              <input id="cvc-input" type="text" placeholder="e.g. 123">
+              <sub id="date-error">can't be blank</sub>
+              <sub id="cvc-error">can't be blank</sub>
+          </div>
+      </form>
+     <p id="btn" class="btn">Continue</p>
+    </div>
+  </aside-right>
+  <section id="success">
+    <div>
+      <img src="./images/icon-complete.svg">
+      <h2>THANK YOU!</h2>
+      <p>We've added your card details</p>
+    </div>
+    <p class="btn">Continue</p>
+  </section>
+    
+  <script src="script.js"></script>
+</body>
+</html>
